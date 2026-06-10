@@ -129,14 +129,14 @@ export const QuizCreatePage = () => {
                   const qTouched = touched.questions?.[index] as any;
 
                   return (
-                    <div key={index} className={styles.questionCard}>
+                    <div key={index} className={cn(styles.questionCard, `quiz_color_${index % 5}`)}>
                       <div className={styles.questionCard_header}>
                         <label className="label">
                           Question {index + 1}
                         </label>
 
                         <button type="button" onClick={() => remove(index)}>
-                          <i className="fa-solid fa-trash-can" />
+                          <i className="fa-solid fa-trash-can icon--delete" />
                         </button>
                       </div>
 
@@ -144,7 +144,7 @@ export const QuizCreatePage = () => {
                       <Field
                         name={`questions.${index}.question`}
                         placeholder="Question"
-                        className={cn('input', {
+                        className={cn(styles.input,'input', {
                           'is-danger':
                             qTouched?.question && qError?.question,
                         })}
@@ -160,7 +160,7 @@ export const QuizCreatePage = () => {
                       <Field
                         as="select"
                         name={`questions.${index}.type`}
-                        className="select"
+                        className={cn(styles.select, 'select')}
                       >
                         {QUESTION_TYPES.map((type) => (
                           <option key={type} value={type}>
@@ -187,7 +187,7 @@ export const QuizCreatePage = () => {
                                     <Field
                                       name={`questions.${index}.answers.${aIndex}`}
                                       placeholder="Answer"
-                                      className={cn('input', {
+                                      className={cn(styles.input, 'input', {
                                         'is-danger': aTouched && aError,
                                       })}
                                     />
@@ -196,7 +196,7 @@ export const QuizCreatePage = () => {
                                       type="button"
                                       onClick={() => remove(aIndex)}
                                     >
-                                      <i className="fa-solid fa-trash-can" />
+                                      <i className="fa-solid fa-trash-can icon--delete" />
                                     </button>
                                   </div>
                                 );
@@ -205,7 +205,7 @@ export const QuizCreatePage = () => {
                               <button
                                 type="button"
                                 onClick={() => push('')}
-                                className="button"
+                                className={cn(styles.button, 'button')}
                               >
                                 + Add answer
                               </button>

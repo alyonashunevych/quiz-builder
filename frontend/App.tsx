@@ -9,7 +9,7 @@ export const App = () => {
   const { error } = useError();
 
   return (
-    <div className="section" data-theme="dark">
+    <div className="section" >
       <Outlet />
       {error && <p className="notification is-danger is-dark">{error}</p>}
     </div>

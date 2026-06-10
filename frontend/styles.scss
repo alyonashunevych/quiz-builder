@@ -8,31 +8,30 @@
   --color-bg: rgb(42, 41, 49);
   --color-primary: rgb(55, 53, 62);
   --color-secondary: rgb(68, 68, 78);
-  --color-messages: rgb(68, 68, 78);
-  --color-messages-current-user: rgb(113, 113, 129);
   --color-scrollbar: rgb(69, 69, 79);
   --color-quiz-0: rgb(96, 45, 82);
   --color-quiz-1: rgb(150, 78, 104);
   --color-quiz-2: rgb(105, 117, 101);
   --color-quiz-3: rgb(172, 155, 108);
   --color-quiz-4: rgb(86, 94, 126);
-  --color-elements: rgba(225, 225, 225, 0.637);
-  --color-selected-room: rgb(225, 225, 225);
+  --color-elements: rgba(219, 219, 219, 0.225);
+  --color-button: rgba(0, 0, 0, 0.273);
+  --color-select: rgba(225, 225, 225, 0.751);
   --color-shadow: rgba(41, 41, 46, 0.775);
   --color-send: rgb(40, 120, 49);
   --color-to-bottom: rgb(74, 76, 86);
-  --color-delete: rgb(120, 40, 40);
+  --color-delete: rgb(96, 6, 6);
   --color-send-form: rgb(203, 201, 201);
   --transition-duration: 0.2s;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-scrollbar);
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -51,23 +50,13 @@ body,
   margin: 0;
   padding: 0;
   background-color: var(--color-bg);
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .section {
   display: flex;
   width: 100%;
   justify-content: center;
-}
-
-.login {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  width: 30%;
-}
-.section {
-  display: flex;
   align-items: center;
 }
 
@@ -90,38 +79,38 @@ body,
   color: rgba(255, 255, 255, 0.5);
 }
 
-.box {
-  .button {
-    width: 100%;
-  }
-
-  .navbar-item {
-    display: flex;
-    width: 150px;
-    justify-content: center;
-
-
-  }
-
-  .is-active {
-    background-color: #ffffff1a;
-  }
-
-  .buttons,
-  .navbar {
-    flex-wrap: nowrap;
-  }
-
-  .navbar {
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: center;
-  }
+.icon--delete {
+  color: var(--color-delete);
 }
 
-.has_margin_top {
-  margin-top: 100px;
-}
+// .box {
+//   .button {
+//     width: 100%;
+//   }
+
+//   .navbar-item {
+//     display: flex;
+//     width: 150px;
+//     justify-content: center;
+
+
+//   }
+
+//   .is-active {
+//     background-color: #ffffff1a;
+//   }
+
+//   .buttons,
+//   .navbar {
+//     flex-wrap: nowrap;
+//   }
+
+//   .navbar {
+//     display: flex;
+//     margin-bottom: 20px;
+//     justify-content: center;
+//   }
+// }
 
 .not-found,
 .box {

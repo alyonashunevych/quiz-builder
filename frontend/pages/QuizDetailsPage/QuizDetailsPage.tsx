@@ -60,7 +60,7 @@ export const QuizDetailsPage = () => {
 
       <div className={cn('columns', styles.list)}>
         {quiz.questions.map((q, index) => (
-          <div key={index} className={cn('box', styles.card)}>
+          <div key={index} className={cn('box', styles.card, `quiz_color_${index % 5}`)}>
             <h2 className={cn('title is-5', styles.question)}>
               {index + 1}. {q.question}
             </h2>
@@ -71,10 +71,10 @@ export const QuizDetailsPage = () => {
 
             {q.type === 'BOOLEAN' && (
               <div className={styles.boolean}>
-                <button className={cn('button is-success is-light', styles.btn)}>
+                <button className={cn('button is-success', styles.btn)}>
                   True
                 </button>
-                <button className={cn('button is-danger is-light', styles.btn)}>
+                <button className={cn('button is-danger', styles.btn)}>
                   False
                 </button>
               </div>

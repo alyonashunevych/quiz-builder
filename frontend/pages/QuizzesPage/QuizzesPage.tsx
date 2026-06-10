@@ -79,7 +79,7 @@ export const QuizzesPage = () => {
               <p>{quiz.questions.length} questions</p>
             </div>
 
-            <i className="fa-solid fa-trash-can fa-2xl" onClick={(e) => {
+            <i className="fa-solid fa-trash-can fa-2xl icon--delete" onClick={(e) => {
               e.stopPropagation();
               handleDelete(quiz.id);
             }} />
