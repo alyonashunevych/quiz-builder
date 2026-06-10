@@ -1,0 +1,55 @@
+.quizzes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+
+  &_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  &_header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    padding-left: 20px;
+    align-items: center;
+    background-color: var(--color-secondary);
+  }
+}
+
+.quiz_card {
+  &_text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  display: flex;
+  border-radius: 15px;
+  flex-direction: row;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+
+  &:hover i {
+    color: white;
+  }
+}

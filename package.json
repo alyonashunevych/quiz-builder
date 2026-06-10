@@ -1,0 +1,85 @@
+{
+  "name": "quiz-builder",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "type": "module",
+  "author": "",
+  "description": "Quiz Builder",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "packages": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.1",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "axios": "^1.17.0",
+    "bulma": "^1.0.4",
+    "classnames": "^2.5.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "formik": "^2.4.9",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^10.0.3",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.3.2",
+    "prisma": "^7.8.0",
+    "sass-embedded": "^1.100.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyonashunevych/quiz-builder.git"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "env": {
+      "es2021": true,
+      "node": true
+    },
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "no-console": "off"
+    }
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "concurrently \"vite\" \"nodemon\"",
+    "build": "vite build",
+    "format": "prettier --write .",
+    "lint": "npm run format && eslint . --ext .ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/alyonashunevych/quiz-builder#readme"
+}

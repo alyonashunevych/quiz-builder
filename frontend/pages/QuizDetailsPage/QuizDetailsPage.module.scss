@@ -1,0 +1,60 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: fit-content;
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  width: 1000px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.boolean {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  flex: 1;
+}
+
+.inputWrap {
+  margin-top: 10px;
+}
+
+
+.checkboxList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.checkboxItem {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.backButton {
+  width: min-content;
+  margin-bottom: 10px;
+}

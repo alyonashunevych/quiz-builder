@@ -1,0 +1,35 @@
+.questions, .answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.quiz {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+
+  &_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.answer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
