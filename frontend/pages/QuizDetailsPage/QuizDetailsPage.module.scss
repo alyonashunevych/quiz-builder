@@ -15,7 +15,17 @@
 }
 
 .card {
-  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 800px;
+
+  &_header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+  }
 }
 
 .list {
@@ -57,9 +67,17 @@
 .backButton {
   width: min-content;
   margin-bottom: 10px;
+  background-color: var(--color-elements);
+
 }
 
-.input {
+.input,
+.tag {
   background-color: var(--color-elements);
   border: none;
+}
+
+.tag {
+  color: white;
+  width: fit-content;
 }

@@ -101,14 +101,14 @@ export const QuizCreatePage = () => {
     >
       {({ isSubmitting, values, errors, touched, isValid }) => (
         <Form className={cn('box', styles.quiz)}>
-          <h2 className="title is-3">Create Quiz</h2>
+          <h2 className="title is-3 is-light">Create Quiz</h2>
 
           {/* TITLE */}
           <div className="field">
-            <label className="label">Quiz title</label>
+            <label className="label is-light">Quiz title</label>
 
             <Field
-              name="title"
+              name="title is-light"
               placeholder="Enter quiz title"
               className={cn('input', {
                 'is-danger': touched.title && errors.title,
@@ -131,11 +131,11 @@ export const QuizCreatePage = () => {
                   return (
                     <div key={index} className={cn(styles.questionCard, `quiz_color_${index % 5}`)}>
                       <div className={styles.questionCard_header}>
-                        <label className="label">
+                        <label className="label is-light">
                           Question {index + 1}
                         </label>
 
-                        <button type="button" onClick={() => remove(index)}>
+                        <button type="button" onClick={() => remove(index)} title="Delete question">
                           <i className="fa-solid fa-trash-can icon--delete" />
                         </button>
                       </div>
@@ -195,6 +195,7 @@ export const QuizCreatePage = () => {
                                     <button
                                       type="button"
                                       onClick={() => remove(aIndex)}
+                                      title="Delete answer"
                                     >
                                       <i className="fa-solid fa-trash-can icon--delete" />
                                     </button>

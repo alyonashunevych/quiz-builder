@@ -76,13 +76,16 @@ export const QuizzesPage = () => {
           >
             <div className={styles.quiz_card_text}>
               <h3 className="title is-3">{quiz.title}</h3>
-              <p>{quiz.questions.length} questions</p>
+              <p className="subtitle is-6" style={{ marginTop: "10px" }}>{quiz.questions.length} questions</p>
             </div>
 
-            <i className="fa-solid fa-trash-can fa-2xl icon--delete" onClick={(e) => {
-              e.stopPropagation();
-              handleDelete(quiz.id);
-            }} />
+            <i className="fa-solid fa-trash-can fa-2xl icon--delete"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDelete(quiz.id);
+              }}
+              title="Delete quiz"
+            />
           </div>
         ))}
       </div>

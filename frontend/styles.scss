@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 [data-theme='dark'] {
-  --bulma-text: rgb(228, 223, 223);
+  --bulma-text: rgb(255, 255, 255);
 }
 
 :root {
@@ -20,7 +20,7 @@
   --color-shadow: rgba(41, 41, 46, 0.775);
   --color-send: rgb(40, 120, 49);
   --color-to-bottom: rgb(74, 76, 86);
-  --color-delete: rgb(96, 6, 6);
+  --color-delete: rgb(34, 2, 2);
   --color-send-form: rgb(203, 201, 201);
   --transition-duration: 0.2s;
 }
@@ -77,6 +77,10 @@ body,
 
 .icon {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.is-light {
+  color: rgba(250, 250, 250, 0.733);
 }
 
 .icon--delete {

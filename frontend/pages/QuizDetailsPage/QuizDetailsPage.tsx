@@ -61,13 +61,15 @@ export const QuizDetailsPage = () => {
       <div className={cn('columns', styles.list)}>
         {quiz.questions.map((q, index) => (
           <div key={index} className={cn('box', styles.card, `quiz_color_${index % 5}`)}>
-            <h2 className={cn('title is-5', styles.question)}>
-              {index + 1}. {q.question}
-            </h2>
+            <div className={styles.card_header}>
+              <h2 className={cn('title is-5')}>
+                {index + 1}. {q.question}
+              </h2>
 
-            <p className={cn('tag is-info is-light', styles.tag)}>
-              {q.type}
-            </p>
+              <p className={cn('tag', styles.tag)}>
+                {q.type}
+              </p>
+            </div>
 
             {q.type === 'BOOLEAN' && (
               <div className={styles.boolean}>
@@ -96,7 +98,7 @@ export const QuizDetailsPage = () => {
                     key={i}
                     className={cn('checkbox', styles.checkboxItem)}
                   >
-                    <input type="checkbox" />
+                    <input type="checkbox"/>
                     <span>{a}</span>
                   </label>
                 ))}
